@@ -83,7 +83,9 @@ Plug 'junegunn/vim-plug'
 " Required
 "NeoBundleFetch 'Shougo/neobundle.vim'
 
-Plug 'molisiye/vimrc'
+source ~/github/dotfiles/vim/vimrc.vim
+
+" Plug 'molisiye/vimrc'
 " ################### 基础 ######################
 
 " file icon
