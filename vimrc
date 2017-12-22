@@ -1,16 +1,3 @@
-"==============================================================================
-"设置leader
-"==============================================================================
-
-let mapleader = "\<Space>"
-"let g:mapleader = "\<Space>"
-
-"创建新文件
-nnoremap <Leader>o :CtrlP<CR>
-"保存文件
-nnoremap <Leader>w :w<CR>
-
-set modifiable
 "------------------------------------------- begin of configs --------------------------------------------
 
 
@@ -19,32 +6,6 @@ set modifiable
 "python dependence: pep8, pyflake
 
 
-" 设置窗口大小
-if (has('gui'))
-    set lines=50
-    set columns=160
-endif
-
-" 使光标一直显示在屏幕中间
-set so=999
-
-set t_Co=256
-set background=dark
-
-set encoding=utf-8
-
-set fileencoding=utf-8
-
-set fileencodings=ucs-bom,utf-8,gbk,cp936,latin-1
-
-" 文件格式，默认 ffs=dos,unix
-set fileformat=unix                                   "设置新（当前）文件的<EOL>格式，可以更改，如：dos（windows系统常用）
-set fileformats=unix,dos,mac                          "给出文件的<EOL>格式类型
-
-set hidden
-set guifontset=                                       "此值为空时才可以分别设置中英文字体
-set guifont=Iosevka_NF:h14                "设置英文字体，下面一行是中文字体
-set guifontwide=Inziu_Iosevka_Slab_SC:h14                 "设置字体:字号（字体名称空格用下划线代替）
 
 "==========================================
 " 插件管理

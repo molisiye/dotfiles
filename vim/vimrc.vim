@@ -1,4 +1,4 @@
-" Version: 0.1
+ Version: 0.1
 " =====================================
 
 if exists("g:loaded_vimrc") || &cp
@@ -58,6 +58,22 @@ endif
 " -----------------------------------------------------------------------------
 "  < Linux Gvim/Vim 默认配置> 做了一点修改
 " -----------------------------------------------------------------------------
+
+
+"==============================================================================
+"设置leader
+"==============================================================================
+
+let mapleader = "\<Space>"
+"let g:mapleader = "\<Space>"
+
+"创建新文件
+nnoremap <Leader>o :CtrlP<CR>
+"保存文件
+nnoremap <Leader>w :w<CR>
+
+set modifiable
+
 if g:islinux
 	set hlsearch        "高亮搜索
 	set incsearch       "在输入要搜索的文字时，实时匹配
@@ -148,6 +164,33 @@ set foldlevel=99
 set cursorline
 
 
+" 设置窗口大小
+if (has('gui'))
+    set lines=50
+    set columns=160
+endif
+
+
+set background=dark
+
+set encoding=utf-8
+
+set fileencoding=utf-8
+
+set fileencodings=ucs-bom,utf-8,gbk,cp936,latin-1
+
+" 文件格式，默认 ffs=dos,unix
+set fileformat=unix                                   "设置新（当前）文件的<EOL>格式，可以更改，如：dos（windows系统常用）
+set fileformats=unix,dos,mac                          "给出文件的<EOL>格式类型
+
+set hidden
+set guifontset=                                       "此值为空时才可以分别设置中英文字体
+set guifont=Iosevka_NF:h14                "设置英文字体，下面一行是中文字体
+set guifontwide=Inziu_Iosevka_Slab_SC:h14                 "设置字体:字号（字体名称空格用下划线代替）
+
+" 使光标一直显示在屏幕中间
+set so=999
+
 " 代码折叠
 set foldenable
 " 折叠方法
@@ -212,11 +255,11 @@ set nowrap                                            "设置不自动换行
 set shortmess=atI                                     "去掉欢迎界面
 
 " 设置 gVim 窗口初始位置及大小
-if g:isGUI
+"if g:isGUI
     " au GUIEnter * simalt ~x                         "窗口启动时自动最大化
-    winpos 300 10                                     "指定窗口出现的位置，坐标原点在屏幕左上角
-    set lines=38 columns=120                          "指定窗口大小，lines为高度，columns为宽度
-endif
+"    winpos 300 10                                     "指定窗口出现的位置，坐标原点在屏幕左上角
+"    set lines=38 columns=120                          "指定窗口大小，lines为高度，columns为宽度
+" endif
 
 
 
