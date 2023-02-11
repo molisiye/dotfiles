@@ -1,0 +1,7 @@
+! === rofi ===
+
+rofi.modi: ssh,window,drun,run
+rofi.theme: ~/.config/rofi/themes/gruvbox/gruvbox-light.rasi
+rofi.lines: 15
+rofi.case-sensitive: false
+rofi.font: monoco 12
