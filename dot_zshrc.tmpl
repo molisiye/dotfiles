@@ -5,21 +5,25 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
+export EDITOR="nvim"
+
 # proxy
-proxy () {
-  export http_proxy="http://192.168.116.1:7890"
-  export https_proxy=$http_proxy
-  export socks5_proxy="socks5://192.168.116.1.1:7890"
-  echo "HTTP Proxy on"
-}
+## proxy () {
+##   export http_proxy="http://192.168.116.1:7890"
+##   export https_proxy=$http_proxy
+##   export socks5_proxy="socks5://192.168.116.1.1:7890"
+##   echo "HTTP Proxy on"
+## }
+##
+## # noproxy
+## noproxy () {
+##   unset http_proxy
+##   unset https_proxy
+##   echo "HTTP Proxy off"
+## }
 
-# noproxy
-noproxy () {
-  unset http_proxy
-  unset https_proxy
-  echo "HTTP Proxy off"
-}
-
+source ~/local
 
 
 function run_diso {
@@ -52,12 +56,12 @@ osxnotify() {
 
 typeset -F4 SECONDS=0
 
-[[ ! -f ~/.zinit/bin/zinit.zsh ]] && {
+[[ ! -f ~/.zinit/bin/zi.zsh ]] && {
     command mkdir -p ~/.zinit
     command git clone https://github.com/zdharma-continuum/zinit ~/.zinit/bin
 }
 
-source "$HOME/.zinit/bin/zinit.zsh"
+source "$HOME/.zinit/bin/zi.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
@@ -122,7 +126,6 @@ zinit svn for \
 
 zinit as="completion" for \
     OMZ::plugins/docker/_docker \
-    OMZ::plugins/rust/_rust \
     OMZ::plugins/fd/_fd
 
 
@@ -145,26 +148,27 @@ zinit light-mode for \
 
 
 # ==== 加载主题 ====
+eval "$(starship init zsh)"
 
-: ${THEME:=spaceship}
+## : ${THEME:=spaceship}
 
-case $THEME in
-    pure)
-        PROMPT=$'\n%F{cyan}❯ %f'
-        RPROMPT=""
-        zstyle ':prompt:pure:prompt:success' color cyan
-        zinit ice lucid wait="!0" pick="async.zsh" src="pure.zsh" atload="prompt_pure_precmd"
-        zinit light Aloxaf/pure
-        ;;
-    p10k)
-        source $XDG_CONFIG_HOME/zsh/p10k.zsh
-        zinit ice depth=1
-        zinit light romkatv/powerlevel10k
-        ;;
-    spaceship)
-        zinit light denysdovhan/spaceship-prompt
-        ;;
-esac
+## case $THEME in
+##     pure)
+##         PROMPT=$'\n%F{cyan}❯ %f'
+##         RPROMPT=""
+##         zstyle ':prompt:pure:prompt:success' color cyan
+##         zinit ice lucid wait="!0" pick="async.zsh" src="pure.zsh" atload="prompt_pure_precmd"
+##         zinit light Aloxaf/pure
+##         ;;
+##     p10k)
+##         source $XDG_CONFIG_HOME/zsh/p10k.zsh
+##         zinit ice depth=1
+##         zinit light romkatv/powerlevel10k
+##         ;;
+##     spaceship)
+##         zinit light denysdovhan/spaceship-prompt
+##         ;;
+## esac
 
 
 eval $(thefuck --alias FUCK)
@@ -231,12 +235,5 @@ alias  xz='tar -xzJf'
 
 alias luamake={{ .chezmoi.homeDir }}/lspserver/lua-language-server/3rd/luamake/luamake
 
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
