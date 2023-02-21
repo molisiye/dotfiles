@@ -14,6 +14,9 @@ font_rules = {
     {
       intensity = 'Bold',
       italic = false,
+    font = wezterm.font_with_fallback({
+       "Sarasa Mono SC Nerd", "JetBrainsMono Nerd Font", "FiraCode Nerd Font",
+      }),
       --font = wezterm.font_with_fallback(
       --  'Operator Mono SSm Lig',
         -- Override the color specified by the terminal output and force
@@ -26,7 +29,7 @@ font_rules = {
   },
 
     front_end = "OpenGL",
-    font_size = 12,
+    font_size = 14,
     color_scheme = "nord",
     enable_tab_bar = true,
     tab_max_width = 20,
