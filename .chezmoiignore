@@ -1,3 +1,6 @@
 {{- if ne .chezmoi.os "linux"}}
-awesome
+.config/awesome
+.config/kvantum
+.config/rofi
+
 {{- end }}
