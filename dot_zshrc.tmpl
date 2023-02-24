@@ -56,12 +56,12 @@ osxnotify() {
 
 typeset -F4 SECONDS=0
 
-[[ ! -f ~/.zinit/bin/zi.zsh ]] && {
+[[ ! -f ~/.zinit/bin/zinit.zsh ]] && {
     command mkdir -p ~/.zinit
     command git clone https://github.com/zdharma-continuum/zinit ~/.zinit/bin
 }
 
-source "$HOME/.zinit/bin/zi.zsh"
+source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
@@ -120,7 +120,7 @@ zinit snippet https://cht.sh/:cht.sh
 zinit ice mv=":zsh -> _cht" as="completion"
 zinit snippet https://cheat.sh/:zsh
 
-zinit svn for \
+zinit ice for \
     OMZ::plugins/extract \
     OMZ::plugins/pip
 
