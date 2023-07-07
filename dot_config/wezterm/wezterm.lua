@@ -4,11 +4,11 @@ local act = wezterm.action
 return {
     use_ime = true,
 --    default_prog = {"/usr/bin/zsh", "-l"},
-    font = wezterm.font_with_fallback({
-       "Sarasa Mono SC Nerd", "JetBrainsMono Nerd Font", "FiraCode Nerd Font",
-        "BlexMono Nerd Font"
-    }),
-font_rules = {
+    -- font = wezterm.font_with_fallback({
+    --    "Sarasa Mono SC Nerd", "JetBrainsMono Nerd Font", "FiraCode Nerd Font",
+    --     "BlexMono Nerd Font"
+    -- }),
+  font_rules = {
     -- For Bold-but-not-italic text, use this relatively bold font, and override
     -- its color to a tomato-red color to make bold text really stand out.
     {
@@ -16,7 +16,8 @@ font_rules = {
       italic = false,
     font = wezterm.font_with_fallback({
        "Sarasa Mono SC Nerd", "JetBrainsMono Nerd Font", "FiraCode Nerd Font",
-      }),
+        "BlexMono Nerd Font"
+      })
       --font = wezterm.font_with_fallback(
       --  'Operator Mono SSm Lig',
         -- Override the color specified by the terminal output and force
