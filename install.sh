@@ -2,6 +2,8 @@
 
 set -e
 
+#sudo dnf copr enable atim/starship
+
 
 packages=(
 flameshot
