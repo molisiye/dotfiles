@@ -1,0 +1,17 @@
+sw_volume: 66
+audio_device_state:1:my_fifo
+audio_device_state:1:My Pulse Output
+state: stop
+current: 2
+random: 1
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:005 魔力红 - Animals 尚恩LC  老赵LD制.mp4
+1:007 魔力红 - One More Night  喵呜字幕组.mp4
+2:355 Bebe Rexha - Ferrari.mp4
+playlist_end

@@ -1,0 +1,227 @@
+export EDITOR="nvim"
+
+# proxy
+proxy () {
+   export http_proxy="http://172.16.156.1:7890"
+   export https_proxy=$http_proxy
+   export socks5_proxy="socks5://172.16.156.1.1:7890"
+   echo "HTTP Proxy on"
+}
+
+# noproxy
+noproxy () {
+  unset http_proxy
+  unset https_proxy
+  echo "HTTP Proxy off"
+}
+
+function run_diso {
+  sh -c "$@" &
+  disown
+}
+
+function pbcopydir {
+  pwd | tr -d "\r\n" | pbcopy
+}
+
+function from-where {
+    echo $^fpath/$_comps[$1](N)
+    whence -v $_comps[$1]
+    which $_comps[$1] 2>&1 | head
+}
+
+whichcomp() {
+    for 1; do
+        ( print -raC 2 -- $^fpath/${_comps[$1]:?unknown command}(NP*$1*) )
+    done
+}
+
+osxnotify() {
+    osascript -e 'display notification "'"$*"'"'
+}
+
+
+# ==== Zplugin 初始化 ====
+
+typeset -F4 SECONDS=0
+
+[[ ! -f ~/.zinit/bin/zinit.zsh ]] && {
+    command mkdir -p ~/.zinit
+    command git clone https://github.com/zdharma-continuum/zinit ~/.zinit/bin
+}
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+
+# ===== 函数 ====
+PATH={{ .chezmoi.homeDir }}/.cargo/bin:$PATH
+autoload -Uz zcalc zmv zargs
+
+# ==== 某些插件需要的设置 ====
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+ZSH_AUTOSUGGEST_COMPLETION_IGNORE='( |man |pikaur -S )*'
+
+GENCOMP_DIR=$HOME/.config/zsh/completions
+
+forgit_add=gai
+forgit_diff=gdi
+forgit_log=glgi
+
+
+
+# ==== 加载插件 ====
+
+zinit wait="1" lucid light-mode for \
+    kevinhwang91/zsh-tmux-capture \
+    hlissner/zsh-autopair \
+    hchbaw/zce.zsh \
+    Aloxaf/gencomp \
+    agkozak/zsh-z \
+    wfxr/forgit
+    
+zinit light-mode for \
+    blockf \
+        zsh-users/zsh-completions \
+    as="program" atclone="rm -f ^(rgg|agv)" \
+        lilydjwg/search-and-view \
+    atclone="dircolors -b LS_COLORS > c.zsh" atpull='%atclone' pick='c.zsh' \
+        trapd00r/LS_COLORS \
+    src="etc/git-extras-completion.zsh" \
+        tj/git-extras
+
+
+zinit wait="1" lucid for \
+    OMZ::lib/clipboard.zsh \
+    OMZ::lib/git.zsh \
+    OMZ::plugins/systemd/systemd.plugin.zsh \
+    OMZ::plugins/sudo/sudo.plugin.zsh \
+    OMZ::plugins/git/git.plugin.zsh
+
+zinit ice mv=":cht.sh -> cht.sh" atclone="chmod +x cht.sh" as="program"
+zinit snippet https://cht.sh/:cht.sh
+
+zinit ice mv=":zsh -> _cht" as="completion"
+zinit snippet https://cheat.sh/:zsh
+
+zinit ice for \
+    OMZ::plugins/extract \
+    OMZ::plugins/pip
+
+zinit as="completion" for \
+    OMZ::plugins/fd/_fd
+
+
+zstyle ':fzf-tab:complete:_zlua:*' query-string input
+zstyle ':fzf-tab:complete:kill:argument-rest' fzf-preview 'ps --pid=$word -o cmd --no-headers -w -w'
+zstyle ':fzf-tab:complete:kill:argument-rest' fzf-flags '--preview-window=down:3:wrap'
+zstyle ':fzf-tab:complete:kill:*' popup-pad 0 3
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' popup-pad 30 0
+zstyle ":completion:*:git-checkout:*" sort false
+zstyle ':completion:*:exa' file-sort modification
+zstyle ':completion:*:exa' sort false
+zstyle ":fzf-tab:*" fzf-flags --color=bg+:23
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+
+
+zinit light-mode for \
+    zdharma-continuum/fast-syntax-highlighting \
+    zsh-users/zsh-autosuggestions
+
+
+# ==== 加载主题 ====
+eval "$(starship init zsh)"
+
+## : ${THEME:=spaceship}
+
+## case $THEME in
+##     pure)
+##         PROMPT=$'\n%F{cyan}❯ %f'
+##         RPROMPT=""
+##         zstyle ':prompt:pure:prompt:success' color cyan
+##         zinit ice lucid wait="!0" pick="async.zsh" src="pure.zsh" atload="prompt_pure_precmd"
+##         zinit light Aloxaf/pure
+##         ;;
+##     p10k)
+##         source $XDG_CONFIG_HOME/zsh/p10k.zsh
+##         zinit ice depth=1
+##         zinit light romkatv/powerlevel10k
+##         ;;
+##     spaceship)
+##         zinit light denysdovhan/spaceship-prompt
+##         ;;
+## esac
+
+
+eval $(thefuck --alias FUCK)
+
+# ==== aliases ====
+
+# chezmoi
+alias cm='chezmoi'
+alias cme='cm edit'
+# 
+alias cat='bat'
+alias ping='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+# 支持在 VS Code 里用 ctrl + o 来打开选择的文件
+#export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+# --color dark 使用颜色方案
+# -rr 只读模式（防止误删和运行新的 shell 程序）
+# --exclude 忽略不想操作的目录
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias help="tldr"
+
+# Edit shortcuts for config files
+alias sshconfig="${EDITOR:-vim} ~/.ssh/config"
+alias zshrc="${EDITOR:-vim} ~/.zshrc && source ~/.zshrc && echo Zsh config edited and reloaded."
+
+# SSH helper
+alias sshclear="rm ~/.ssh/multiplex/* -f && echo SSH connection cache cleared;"
+alias sshlist="echo Currently open ssh connections && echo && l ~/.ssh/multiplex/"
+
+alias c="clear"
+alias h="history"
+alias path="echo -e ${PATH//:/\\n}"
+
+# Date and Time Alias
+alias d="date + %F"
+alias now="date + '%T'"
+alias nowtime=now
+alias nowdate="date + '%m-%d-%Y'"
+
+alias snv="sudo nvim"
+
+# Show open ports
+alias ports="netstat -tulanp"
+
+# Prettify the Output of Various Commands
+alias dfc="df -hP | column -t"
+alias mount="mount | column -t"
+
+# lsd
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
+alias  gz='tar -xzvf'
+alias  tgz='tar -xzvf'
+alias  zip='unzip'
+alias  bz2='tar -xjvf'
+alias  xz='tar -xzJf'
+alias dnf5='sudo dnf5'
+
+alias luamake={{ .chezmoi.homeDir }}/lspserver/lua-language-server/3rd/luamake/luamake
+
+eval $(thefuck --alias)
+
+
+### End of Zinit's installer chunk

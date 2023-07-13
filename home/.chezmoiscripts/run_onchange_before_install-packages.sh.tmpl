@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# part of copy from https://github.com/kitos9112/dotfiles/blob/master/home/.chezmoiscripts/00_run_once_before/run_once_before_00-linux-install-prereq.sh.tmpl
+set -ev pipefail
+
+{{- if (eq .chezmoi.osRelease.id "fedora") -}}
+sudo dnf copr enable atim/starship
+{{ $packages := list
+  "flatpak"
+  "fcitx5"
+  "flameshot"
+  "papirus-icon-theme"
+  "rofi-wayland"
+  "jq"
+  "redshift"
+  "qt5ct"
+  "kvantum"
+  "gnome-system-monitor"
+  "polkit-gnome"
+  "gnome-keyring"
+  "mpc"
+  "ncmpcpp"
+  "playerctl"
+  "mpdris2"
+  "prettyping"
+  "lsd"
+  "thefuck"
+  "bat"
+  "fzf"
+  "fd-find"
+  "ncdu"
+  "tldr"
+  "starship"
+  "imv" -}}
+{{ $flatpaks := list -}}
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{    $sudo = "" -}}
+{{ end -}}
+
+sudo dnf update
+sudo dnf upgrade -y
+sudo dnf install -y {{ $packages | join " " }}
+
+# Setting the System Locale
+# localctl set-locale LANG={ { .locale }} || echo -e "Could not set locale - Ignore if happens within Container"
+
+# TODO - Modify `apply_updates = yes` in /etc/dnf/automatic.conf
+## Add `systemctl enable --now dnf-automatic.timer`
+{{ end -}}
