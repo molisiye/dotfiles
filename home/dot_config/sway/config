@@ -13,6 +13,11 @@ set $left h
 set $down j
 set $up k
 set $right l
+
+# Polkit: privilege escalation dialog
+exec lxpolkit
+
+font Iosevka Nerd Font Mono 12
 # Your preferred terminal emulator
 # Recommends: foot
 set $term foot
@@ -31,7 +36,8 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /usr/share/backgrounds/default.png fill
+#output * bg /usr/share/backgrounds/default.png fill
+output * bg ~/图片/night.jpg fill
 #
 # Example configuration:
 #
