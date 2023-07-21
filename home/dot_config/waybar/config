@@ -1,71 +1,170 @@
 {
-    "height": 30, // Waybar height (to be removed for auto height)
-    "layer": "top", // Waybar at top layer
-    "margin-top": 6,
-    "margin-left": 10,
-    "margin-bottom": 0,
-    "margin-right": 10,
-    "spacing": 5, // Gaps between modules (4px)
-    "modules-left": ["custom/launcher", "cpu", "memory", "sway/workspaces", "custom/weather"],
-    "modules-center": ["custom/spotify"],
-    "modules-right": ["tray", "backlight", "pulseaudio", "network", "battery", "clock", "custom/power-menu"],
+    // "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)		
+    "height": 18, // Waybar height (to be removed for auto height)
+    "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "custom/github", "custom/reddit", "custom/youtube", "sway/window"],
+    "modules-center": ["sway/mode"],
+    "modules-right": ["pulseaudio","custom/weather", "disk", "memory", "cpu", "network", "custom/pacman","tray","custom/recorder","clock","custom/power",],
+    // Modules configuration
     "sway/workspaces": {
+      "disable-scroll": false,
+      "all-outputs": true,
       "format": "{icon}",
-      "on-click": "activate",
+      "persistent_workspaces": {
+        "1": [],
+      },
       "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
+        "1": " ",
+        "2": " ",
+        "3": " ",
+        "4": "",
+        "5": " ",
+        "6": " ",
+        "7": " ",
+        "8": " ",
+        "focused": "",
         "urgent": "",
-        "active": "",
         "default": ""
-      }
+      },
+      "icon-size": 15
     },
-    "hyprland/window": {
-        "format": "{}"
+    "river/tags": {
+      "num-tags": 7
+    },
+    "sway/mode": {
+      "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window": {
+    	"format": "{}",
+    },
+    "custom/media": {
+       "format":"{icon}{}",
+       "return-type": "json",
+       "format-icons": {
+          "Playing": "   ",
+          "Paused": "   ",
+          "Music": "   "
+       },
+       // "max-length":45,
+       "interval":3,
+       "exec": "fish -c playerstatus | tail -1",
+       "exec-on-event":"fish -c playerstatus | tail -1",
+       "on-click": "playerctl play-pause",
+       "on-click-right": "cmus-remote -u",
+    },
+    "custom/recorder": {
+       "return-type": "json",
+       "format":"{}",
+       "interval":3,
+       "exec": "fish -c recording | tail -1",
+       "exec-on-event": "fish -c recording | tail -1",
+       "on-click": "kill -INT -$(pgrep wf-recorder)"
     },
     "tray": {
-        "spacing": 10
+         "spacing": 10,
+    },
+    "idle_inhibitor": {
+         "format": "{icon}",
+         "format-icons": {
+         "activated": "",
+         "deactivated": ""
+      }
+    },
+    "mpd": {
+	    "format": "{stateIcon} {consumeIcon} {randomIcon} {repeatIcon} {singleIcon} {artist}-{title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    	"format-disconnected": "",
+    	"format-stopped": "{consumeIcon} {randomIcon} {repeatIcon} {singleIcon} Stopped",
+    	"interval": 10,
+    	"consume-icons": {
+    		"on": " " // Icon shows only when "consume" is on
+    	},
+    	"random-icons": {
+    		"off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+    		"on": " "
+    	},
+    	"repeat-icons": {
+    		"on": " "
+    	},
+    	"single-icons": {
+    		"on": " 1"
+    	},
+    	"state-icons": {
+    		"paused": " ",
+    		"playing": " "
+    	},
+    	"tooltip-format": "MPD (connected)",
+    	"tooltip-format-disconnected": "MPD (disconnected)"
     },
     "clock": {
-        "format": "<span color='#bf616a'> </span>{:%a %b %d}",
-        "format-alt": "<span color='#bf616a'> </span>{:%I:%M %p}",
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        // "timezone": "America/New_York",
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%A, %B %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        // "format-alt": "{:%Y-%m-%d}"
     },
-
     "cpu": {
-      "interval": 10,
-      "format": " {}%",
-      "max-length": 10,
-      "on-click": "",
+        "format": "{usage}% ",
+        "on-click": "kitty -e ytop",
+        "tooltip": false
     },
     "memory": {
-        "interval": 30,
-        "format": " {}%",
-        "format-alt":" {used:0.1f}G",
-        "max-length": 10,
+        "format": "{}% "
+    },
+    "temperature": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "interval": 60,
+        "format-icons": ["", "", ""]
     },
     "backlight": {
-        "device": "DP-1",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-click": "",
+        "interval": 5,
+        "format": "{icon}",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": ["🌕", "🌔", "🌓", "🌒", "🌑"],
+        "on-scroll-down": "light -U 5",
+        "on-scroll-up": "light -A 5"
+    },
+    "battery": {
+        "states": {
+          "good": 99,
+          "warning": 30,
+          "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT0"
     },
     "network": {
-        "format-wifi": "直 {signalStrength}%",
-        "format-ethernet": " wired",
-        "format-disconnected": "睊",
-        "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
-        "format-disconnected": "Disconnected  ",
+        "interface": "wlan0", // (Optional) To force the use of this interface
+        "format-wifi": " ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "interval": 60,
+        "on-click-middle": "exec kitty -e nmtui"
     },
-
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "  {volume}%",
-        "format-bluetooth-muted": " ",
-        "format-muted": "婢",
+        "scroll-step": 1, // %, can be a float
+        "format": "{volume}%  {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -75,54 +174,68 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
-    },
-
-    "bluetooth": {
-        "on-click": "~/.config/waybar/scripts/rofi-bluetooth &",
-        "format": " {status}",
-    },
-
-    "battery": {
-      "bat": "BAT0",
-      "adapter": "ADP0",
-      "interval": 60,
-      "states": {
-          "warning": 30,
-          "critical": 15
-      },
-      "max-length": 20,
-      "format": "{icon} {capacity}%",
-      "format-warning": "{icon} {capacity}%",
-      "format-critical": "{icon} {capacity}%",
-      "format-charging": "<span font-family='Font Awesome 6 Free'></span> {capacity}%",
-      "format-plugged": "  {capacity}%",
-      "format-alt": "{icon} {time}",
-      "format-full": "  {capacity}%",
-      "format-icons": [" ", " ", " ", " ", " "],
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2% && pamixer --get-volume > $SWAYSOCK.wob",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2% && pamixer --get-volume > $SWAYSOCK.wob",
     },
     "custom/weather": {
-      "exec": "python3 ~/.config/waybar/scripts/weather.py",
-      "restart-interval": 300,
-      "return-type": "json",
-      "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/a319796a4173829988d68c4e3a5f90c1b6832667ea7aaa201757a1c887ec667a"
-    },   
-
-   "custom/spotify": {
-    "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
-    "format": "{}  ",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-double-click-right": "playerctl next",
-    "on-scroll-down": "playerctl previous",
+        "exec": "~/.config/waybar/scripts/weather-bar.sh",
+        "format": "{}",
+        "interval": 600
     },
-    "custom/power-menu": {
-        "format": " <span color='#6a92d7'>⏻ </span>",
-        "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
-    }, 
-    "custom/launcher": {
-        "format": " <span color='#6a92d7'> </span>",
-        "on-click": "rofi -show drun",
+	  "custom/pacman": {
+        "format": "{}   ",
+        "interval": 3600,                     // every hour
+        // "restart-interval": 3600,
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "kitty -e yay; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8,
     },
+    "disk": {
+        "interval": 30,
+        "format": "{percentage_free}% ",
+        "path": "/home",
+    },
+    "custom/power": {
+      	"format": "⏻",
+      	"on-click": "wlogout -p layer-shell",
+    	  "tooltip": false 
+    },
+    "custom/github": {
+    	  "format": "",
+    	  "on-click": "xdg-open https://github.com",
+    	  "tooltip": false 
+    },
+	  "custom/reddit": {
+    	  "format": "",
+    	  "on-click": "xdg-open https://www.reddit.com/",
+    	  "tooltip": false 
+    },
+    "custom/youtube": {
+      	"format": "",
+    	  "on-click": "xdg-open https://www.youtube.com/",
+    	  "tooltip": false 
+    },
+    "custom/mail": {
+       	"format": "",
+        "on-click": "xdg-open https://moncourriel.etsmtl.ca/",
+    	  "tooltip": false 
+    },
+    "custom/library": {
+        "format": "",
+        "on-click": "fish -c manga_menu",
+    	  "tooltip": false 
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        // "format": "{title:.16}",
+        "icon-theme": "Papirus",
+        "icon-size": 15,
+        "on-click": "activate",
+        "markup": true,
+        "max-length": 7,
+        "on-click-right": "minimize",
+        "on-click-middle": "close"
+    }
 }
-

@@ -4,6 +4,10 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+include catppuccin
+
+xwayland enable
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -13,6 +17,16 @@ set $left h
 set $down j
 set $up k
 set $right l
+
+default_border pixel 1
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+  swaybar_command waybar
+}
 
 # Polkit: privilege escalation dialog
 exec lxpolkit
@@ -37,7 +51,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
 #output * bg /usr/share/backgrounds/default.png fill
-output * bg ~/图片/night.jpg fill
+output * bg ./night.jpg fill
 #
 # Example configuration:
 #
@@ -71,6 +85,24 @@ output * bg ~/图片/night.jpg fill
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+
+
+set $gnome-schema org.gnome.desktop.interface
+seat seat0 xcursor_theme Catppuccin-Mocha-Light-Cursors
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Rosewater-Dark'
+    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+    gsettings set $gnome-schema cursor-theme 'Catppuccin-Mocha-Light-Cursors'
+    gsettings set $gnome-schema font-name 'Iosevka Nerd Font Mono 11'
+  }
+
+# Window decoration
+# class                 border  backgr. text    indicator child_border
+client.focused          #5e81ac #5e81ac #3b4252 #3b4252   #5e81ac
+client.focused_inactive #e5e9f0 #e5e9f0 #3b4252 #e5e9f0   #434c5e
+client.unfocused        #e5e9f0 #e5e9f0 #3b4252 #e5e9f0   #434c5e
+client.urgent           #7c818c #bf616a #3b4252 #900000   #bf616a
+client.placeholder      #000000 #0c0c0c #3b4252 #000000   #0c0c0c
 
 ### Key bindings
 #
