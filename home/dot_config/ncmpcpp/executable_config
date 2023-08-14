@@ -1,5 +1,5 @@
 [mpd]
-mpd_music_dir = "/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/"
+mpd_music_dir = "~/mac/music"
 mpd_host = "localhost"
 mpd_port = "6600"
 mpd_crossfade_time = "2"

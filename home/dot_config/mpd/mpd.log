@@ -879,3 +879,382 @@ Jul 13 14:37 : update: added /0296.冰冻的女人-邝美云.flac
 Jul 13 14:37 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
 Jul 13 14:37 : player: played "0046.Para Para 樱之花-郭富城.flac"
 Jul 13 15:18 : player: played "0357.不要走不要走-潘美辰.flac"
+Jul 21 16:02 : exception: inotify_add_watch() has failed: No such file or directory
+Jul 21 16:02 : config: option 'buffer_time' on line 219 was not recognized
+Jul 21 16:02 : exception: inotify_add_watch() has failed: No such file or directory
+Jul 21 16:02 : config: option 'buffer_time' on line 219 was not recognized
+Jul 21 16:02 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac': No such file or directory
+Jul 21 16:02 : player: played "0357.不要走不要走-潘美辰.flac"
+Jul 21 16:02 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac': No such file or directory
+Jul 21 16:02 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac': No such file or directory
+Jul 21 16:02 : player: played "0357.不要走不要走-潘美辰.flac"
+Jul 21 16:02 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:05 : config: option 'buffer_time' on line 219 was not recognized
+Jul 21 16:05 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:05 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac': No such file or directory
+Jul 21 16:05 : player: played "0056.Track08-邓丽君.flac"
+Jul 21 16:05 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac': No such file or directory
+Jul 21 16:05 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac': No such file or directory
+Jul 21 16:05 : player: played "0357.不要走不要走-潘美辰.flac"
+Jul 21 16:05 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac': No such file or directory
+Jul 21 16:05 : player: played "0046.Para Para 樱之花-郭富城.flac"
+Jul 21 16:05 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac': No such file or directory
+Jul 21 16:05 : player: played "0046.Para Para 樱之花-郭富城.flac"
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac': No such file or directory
+Jul 21 16:07 : player: played "0056.Track08-邓丽君.flac"
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac': No such file or directory
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac': No such file or directory
+Jul 21 16:07 : player: played "0046.Para Para 樱之花-郭富城.flac"
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0295.别在伤口洒盐-张惠妹.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0295.别在伤口洒盐-张惠妹.flac': No such file or directory
+Jul 21 16:07 : player: played "0295.别在伤口洒盐-张惠妹.flac"
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac': No such file or directory
+Jul 21 16:07 : player: played "0046.Para Para 樱之花-郭富城.flac"
+Jul 21 16:07 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac': No such file or directory
+Jul 21 16:07 : player: played "0046.Para Para 樱之花-郭富城.flac"
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0046.Para Para 樱之花-郭富城.flac': No such file or directory
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0056.Track08-邓丽君.flac': No such file or directory
+Jul 21 16:07 : player: played "0056.Track08-邓丽君.flac"
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0295.别在伤口洒盐-张惠妹.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0295.别在伤口洒盐-张惠妹.flac': No such file or directory
+Jul 21 16:07 : player: played "0295.别在伤口洒盐-张惠妹.flac"
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac': No such file or directory
+Jul 21 16:07 : exception: Failed to decode /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac; Failed to open '/mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500)/0357.不要走不要走-潘美辰.flac': No such file or directory
+Jul 21 16:07 : player: played "0357.不要走不要走-潘美辰.flac"
+Jul 21 16:07 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:08 : exception: Failed to access /mnt/hgfs/down/FLAC无损歌库收藏系列 01 (1-500): No such file or directory
+Jul 21 16:09 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:09 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:09 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:09 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:09 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:09 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:10 : config: option 'buffer_time' on line 219 was not recognized
+Jul 21 16:10 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:11 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:13 : player: played "0046.Para Para 樱之花-郭富城.flac"
+Jul 21 16:14 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:18 : exception: Failed to decode /home/molisiye/mac/music/0357.不要走不要走-潘美辰.flac; Failed to open '/home/molisiye/mac/music/0357.不要走不要走-潘美辰.flac': No such file or directory
+Jul 21 16:19 : player: played "0153.爱如潮水-张信哲.flac"
+Jul 21 16:19 : player: played "0357.不要走不要走-潘美辰.flac"
+Jul 21 16:19 : exception: Failed to decode /home/molisiye/mac/music/0357.不要走不要走-潘美辰.flac; Failed to open '/home/molisiye/mac/music/0357.不要走不要走-潘美辰.flac': No such file or directory
+Jul 21 16:19 : player: played "0357.不要走不要走-潘美辰.flac"
+Jul 21 16:23 : player: played "0153.爱如潮水-张信哲.flac"
+Jul 21 16:27 : exception: Failed to decode /home/molisiye/mac/music/0295.别在伤口洒盐-张惠妹.flac; Failed to open '/home/molisiye/mac/music/0295.别在伤口洒盐-张惠妹.flac': No such file or directory
+Jul 21 16:27 : player: played "0046.Para Para 樱之花-郭富城.flac"
+Jul 21 16:27 : player: played "0295.别在伤口洒盐-张惠妹.flac"
+Jul 21 16:27 : exception: Failed to decode /home/molisiye/mac/music/0357.不要走不要走-潘美辰.flac; Failed to open '/home/molisiye/mac/music/0357.不要走不要走-潘美辰.flac': No such file or directory
+Jul 21 16:27 : player: played "0357.不要走不要走-潘美辰.flac"
+Jul 21 16:28 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:28 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:28 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:28 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:28 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:28 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:28 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:28 : update: removing 0215.爸爸妈妈-Beyond.flac
+Jul 21 16:28 : update: removing 0431.痴情(一串痴情一串泪)-黎姿&张卫健.flac
+Jul 21 16:28 : update: removing 0422.成熟1、2-郑智化.flac
+Jul 21 16:28 : update: removing 0405.偿还 (国语)-邓丽君.flac
+Jul 21 16:28 : update: removing 0386.草原请你来-蒙克.flac
+Jul 21 16:28 : update: removing 0357.不要走不要走-潘美辰.flac
+Jul 21 16:28 : update: removing 0295.别在伤口洒盐-张惠妹.flac
+Jul 21 16:28 : update: removing 0268.笨小孩-刘德华.flac
+Jul 21 16:28 : update: removing 0440.冲冲冲 电影 铁血骑警 主题曲-太极.flac
+Jul 21 16:28 : update: removing 0455.处处吻-杨千嬅.flac
+Jul 21 16:28 : update: removing 0477.匆匆那年-王菲.flac
+Jul 21 16:28 : update: removing 0474.纯属废话-陈雅伦.flac
+Jul 21 16:28 : update: removing 0390.草原之夜-刀郎.flac
+Jul 21 16:28 : update: removing 0441.冲动的惩罚-刀郎.flac
+Jul 21 16:28 : update: removing 0486.错过了缘分错过你-陈瑞.flac
+Jul 21 16:28 : update: removing 0467.春风秋雨-张学友.flac
+Jul 21 16:28 : update: removing 0436.痴心换情深-周慧敏.flac
+Jul 21 16:28 : update: removing 0273.俾面派对-Beyond.flac
+Jul 21 16:28 : update: removing 0497.大地-Beyond.flac
+Jul 21 16:28 : update: removing 0347.不要对他说-张信哲.flac
+Jul 21 16:28 : update: removing 0250.北极雪-陈慧琳&冯德伦.flac
+Jul 21 16:28 : update: removing 0407.唱这歌-郭富城.flac
+Jul 21 16:28 : update: removing 0403.缠绵游戏-梁汉文.ape
+Jul 21 16:28 : update: removing 0434.痴心不变-黄翊.ape
+Jul 21 16:28 : update: removing 0456.触电-S.H.E.flac
+Jul 21 16:28 : update: removing 0319.不来也不去-陈奕迅.flac
+Jul 21 16:28 : update: removing 0410.超速驾驶-郑秀文.flac
+Jul 21 16:28 : update: removing 0363.不再犹豫-Beyond.flac
+Jul 21 16:28 : update: removing 0253.贝壳风铃-刘惜君.flac
+Jul 21 16:28 : update: removing 0324.不能承受的感动-郑秀文.flac
+Jul 21 16:28 : update: removing 0236.半糖主义-S.H.E.flac
+Jul 21 16:28 : update: removing 0272.彼此的世界早已拉近-罗嘉良.flac
+Jul 21 16:28 : update: removing 0309.不变的谎言-周慧敏.flac
+Jul 21 16:28 : update: removing 0435.痴心错付-刘德华.flac
+Jul 21 16:28 : update: removing 0453.除了你-韩宝仪.flac
+Jul 21 16:28 : update: removing 0488.错误的爱-韩宝仪.flac
+Jul 21 16:28 : update: removing 0381.沧海一声笑-黄霑.flac
+Jul 21 16:28 : update: removing 0404.常回家看看-陈红.flac
+Jul 21 16:28 : update: removing 0304.玻璃之情-张国荣.flac
+Jul 21 16:28 : update: removing 0362.不再掩饰-崔健.flac
+Jul 21 16:28 : update: removing 0449.出走-崔健.flac
+Jul 21 16:28 : update: removing 0482.从头再来-崔健.flac
+Jul 21 16:28 : update: removing 0327.不能没有你-刘德华.flac
+Jul 21 16:28 : update: removing 0286.别傻了-周华健&任贤齐.flac
+Jul 21 16:28 : update: removing 0271.彼岸花语-陈瑞.flac
+Jul 21 16:28 : update: removing 0320.不浪漫罪名-王杰.flac
+Jul 21 16:28 : update: removing 0248.北国之春-邓丽君.flac
+Jul 21 16:28 : update: removing 0364.不再-张信哲.flac
+Jul 21 16:28 : update: removing 0365.不只是朋友-黄小琥.flac
+Jul 21 16:28 : update: removing 0315.不嫁高富帅不爱美富白-郭慧敏.flac
+Jul 21 16:28 : update: removing 0308.不必在乎我是谁-林忆莲.flac
+Jul 21 16:28 : update: removing 0314.不悔-蔡琴.flac
+Jul 21 16:28 : update: removing 0342.不想长大-S.H.E.flac
+Jul 21 16:28 : update: removing 0284.别让我一个人醉-姜育恒.flac
+Jul 21 16:28 : update: removing 0321.不老的传说-张学友.flac
+Jul 21 16:28 : update: removing 0329.不能说的秘密-周杰伦.flac
+Jul 21 16:28 : update: removing 0352.不要再来伤害我-张振宇.flac
+Jul 21 16:28 : update: removing 0333.不让我的眼泪陪我过夜-齐秦.flac
+Jul 21 16:28 : update: removing 0216.霸王别姬-屠洪刚.flac
+Jul 21 16:28 : update: removing 0382.沧海一声笑-任贤齐.flac
+Jul 21 16:28 : update: removing 0243.暴风女神Lorelei-谭咏麟.flac
+Jul 21 16:28 : update: removing 0305.捕风的汉子-谭咏麟.flac
+Jul 21 16:28 : update: removing 0396.曾经-谭咏麟.flac
+Jul 21 16:28 : update: removing 0439.迟来的春天-谭咏麟.flac
+Jul 21 16:28 : update: removing 0464.创造命运-谭咏麟.flac
+Jul 21 16:28 : update: removing 0472.春天花会开-任贤齐.flac
+Jul 21 16:28 : update: removing 0458.传奇-王菲.flac
+Jul 21 16:28 : update: removing 0252.贝加尔湖畔-李健.flac
+Jul 21 16:28 : update: removing 0265.本草纲目-周杰伦.flac
+Jul 21 16:28 : update: removing 0473.春天里-汪峰.flac
+Jul 21 16:28 : update: removing 0228.半岛铁盒-周杰伦.flac
+Jul 21 16:28 : update: removing 0235.半兽人-周杰伦.flac
+Jul 21 16:28 : update: removing 0343.不需要爱情-刘德华.flac
+Jul 21 16:28 : update: removing 0299.冰吻-王键.flac
+Jul 21 16:28 : update: removing 0442.冲上云霄-林子祥.flac
+Jul 21 16:28 : update: removing 0383.沧桑情歌-冷漠.flac
+Jul 21 16:28 : update: removing 0375.彩虹-羽·泉.flac
+Jul 21 16:28 : update: removing 0485.错错错-六哲&陈娟儿.flac
+Jul 21 16:28 : update: removing 0336.不是每个恋曲都有美好的回忆-林志颖.flac
+Jul 21 16:28 : update: removing 0447.出塞曲 II-蔡琴.flac
+Jul 21 16:28 : update: removing 0448.出塞曲-蔡琴.flac
+Jul 21 16:28 : update: removing 0412.朝圣者的脚步-刀郎.flac
+Jul 21 16:28 : update: removing 0361.不再联系-夏天Alex.flac
+Jul 21 16:28 : update: removing 0368.擦干你的泪水-刘芳.flac
+Jul 21 16:28 : update: removing 0437.迟到-刘文正.flac
+Jul 21 16:28 : update: removing 0366.不装饰你的梦-蔡国权.flac
+Jul 21 16:28 : update: removing 0451.初恋的地方-张信哲.flac
+Jul 21 16:28 : update: removing 0294.别用下辈子安慰我-陈瑞.flac
+Jul 21 16:28 : update: removing 0291.别问我是谁-王馨平.flac
+Jul 21 16:28 : update: removing 0260.被伤过的心还可以爱谁-六哲.flac
+Jul 21 16:28 : update: removing 0355.不要在我寂寞的时候说爱我-T.R.Y..flac
+Jul 21 16:28 : update: removing 0239.包容-郑源.flac
+Jul 21 16:28 : update: removing 0238.包青天-胡瓜.flac
+Jul 21 16:28 : update: removing 0251.北京的冬天-老狼.flac
+Jul 21 16:28 : update: removing 0246.北方的天空下-刀郎.flac
+Jul 21 16:28 : update: removing 0495.大笨钟-周杰伦.flac
+Jul 21 16:28 : update: removing 0337.不是我不明白-崔健.flac
+Jul 21 16:28 : update: removing 0231.半句承诺-陈瑞.flac
+Jul 21 16:28 : update: removing 0230.半斤八两-许冠杰.flac
+Jul 21 16:28 : update: removing 0233.半梦半醒之间-谭咏麟.flac
+Jul 21 16:28 : update: removing 0234.半生缘-黎明.flac
+Jul 21 16:28 : update: removing 0232.半路-刘若英.flac
+Jul 21 16:28 : update: removing 0378.彩云之南-徐千雅.flac
+Jul 21 16:28 : update: removing 0280.别哭，我最爱的人-郑智化.flac
+Jul 21 16:28 : update: removing 0262.被遗忘的-杨宗纬.flac
+Jul 21 16:28 : update: removing 0278.变心的翅膀-陈明真.flac
+Jul 21 16:28 : update: removing 0483.催眠-王菲.flac
+Jul 21 16:28 : update: removing 0249.北国之春-韩宝仪.flac
+Jul 21 16:28 : update: removing 0428.吃醋-慕容晓晓.flac
+Jul 21 16:28 : update: removing 0432.痴情的爱-任静.flac
+Jul 21 16:28 : update: removing 0373.采红菱-邓丽君.flac
+Jul 21 16:28 : update: removing 0462.床边故事-周杰伦.flac
+Jul 21 16:28 : update: removing 0421.成全-刘若英.flac
+Jul 21 16:28 : update: removing 0293.别因寂寞犯了错-于金胜.flac
+Jul 21 16:28 : update: removing 0326.不能跟情人说的话-范玮琪&刘若英.flac
+Jul 21 16:28 : update: removing 0351.不要逃避-唐朝.ape
+Jul 21 16:28 : update: removing 0459.传说-唐朝.flac
+Jul 21 16:28 : update: removing 0408.唱着情歌流着泪-祁隆&孟小笛.flac
+Jul 21 16:28 : update: removing 0298.冰山上的雪莲-刀郎.flac
+Jul 21 16:28 : update: removing 0494.打起手鼓唱起歌-刀郎.flac
+Jul 21 16:28 : update: removing 0261.被遗忘的时光-蔡琴.flac
+Jul 21 16:28 : update: removing 0338.不是我不小心-张镐哲.flac
+Jul 21 16:28 : update: removing 0341.不想让你知道-周蕙.flac
+Jul 21 16:28 : update: removing 0425.城里的月光-许美静.flac
+Jul 21 16:28 : update: removing 0492.答案-徐小凤.flac
+Jul 21 16:28 : update: removing 0498.大地恩情-关正杰.flac
+Jul 21 16:28 : update: removing 0385.草原情-降央卓玛.flac
+Jul 21 16:28 : update: removing 0450.初恋的地方-邓丽君.flac
+Jul 21 16:28 : update: removing 0302.波斯猫-S.H.E.flac
+Jul 21 16:28 : update: removing 0220.白狐-陈瑞.flac
+Jul 21 16:28 : update: removing 0395.曾经是我最爱的人-陈瑞.flac
+Jul 21 16:28 : update: removing 0301.兵哥哥-宋祖英.flac
+Jul 21 16:28 : update: removing 0264.奔-孙燕姿.flac
+Jul 21 16:28 : update: removing 0409.超快感-孙燕姿.flac
+Jul 21 16:28 : update: removing 0500.大地飞歌-宋祖英.flac
+Jul 21 16:28 : update: removing 0399.曾在你怀抱-陈百强&林姗姗.flac
+Jul 21 16:28 : update: removing 0289.别思-陈瑞.flac
+Jul 21 16:28 : update: removing 0296.冰冻的女人-邝美云.flac
+Jul 21 16:28 : update: removing 0452.初恋情人-刘小慧.flac
+Jul 21 16:28 : update: removing 0240.宝贝对不起-草蜢.flac
+Jul 21 16:28 : update: removing 0270.彼岸花-王菲.flac
+Jul 21 16:28 : update: removing 0312.不敢相信的爱情-原声大碟.flac
+Jul 21 16:28 : update: removing 0358.不愿一个人-周华健.flac
+Jul 21 16:28 : update: removing 0465.创造晴天-罗嘉良.flac
+Jul 21 16:28 : update: removing 0423.承诺-刘德华.flac
+Jul 21 16:28 : update: removing 0372.裁缝-郑智化.flac
+Jul 21 16:28 : update: removing 0269.比我幸福-陈晓东.flac
+Jul 21 16:28 : update: removing 0392.曾经爱过-张信哲.flac
+Jul 21 16:28 : update: removing 0416.彻彻底底忘记你-蒋钰华.flac
+Jul 21 16:28 : update: removing 0313.不管有多苦-那英.flac
+Jul 21 16:28 : update: removing 0274.碧兰村的姑娘-邓丽君.flac
+Jul 21 16:28 : update: removing 0446.出卖-那英.flac
+Jul 21 16:28 : update: removing 0322.不了情-邓丽君.flac
+Jul 21 16:28 : update: removing 0402.缠绵-刘德华.flac
+Jul 21 16:28 : update: removing 0331.不怕不能再相见-邓丽君.flac
+Jul 21 16:28 : update: removing 0433.痴情泪-林玉英.flac
+Jul 21 16:28 : update: removing 0227.搬屋-郑中基.flac
+Jul 21 16:28 : update: removing 0245.北の宿から-邓丽君.flac
+Jul 21 16:28 : update: removing 0460.窗外-邓丽君.flac
+Jul 21 16:28 : update: removing 0429.痴痴缠-千百惠.flac
+Jul 21 16:28 : update: removing 0476.刺伤-千百惠.flac
+Jul 21 16:28 : update: removing 0468.春泥-庾澄庆.flac
+Jul 21 16:28 : update: removing 0267.笨小孩-刘德华&柯受良&吴宗宪.flac
+Jul 21 16:28 : update: removing 0311.不该爱上你-刘德华.flac
+Jul 21 16:28 : update: removing 0255.背对背拥抱-林俊杰.flac
+Jul 21 16:28 : update: removing 0229.半点心-草蜢.flac
+Jul 21 16:28 : update: removing 0306.不爱我放了我-许茹芸.flac
+Jul 21 16:28 : update: removing 0288.别说我的眼泪你无所谓-郑源.flac
+Jul 21 16:28 : update: removing 0221.白桦林-朴树.flac
+Jul 21 16:28 : update: removing 0445.丑八怪-李克勤.flac
+Jul 21 16:28 : update: removing 0370.猜不透-丁当.flac
+Jul 21 16:28 : update: removing 0257.被爱-张国荣.flac
+Jul 21 16:28 : update: removing 0369.擦肩而过-郑源.flac
+Jul 21 16:28 : update: removing 0348.不要让我苦等候-林翠萍.flac
+Jul 21 16:28 : update: removing 0281.别来纠缠我-黑豹乐队.flac
+Jul 21 16:28 : update: removing 0356.不要指望我-黑豹乐队.flac
+Jul 21 16:28 : update: removing 0411.朝前走-黑豹乐队.flac
+Jul 21 16:28 : update: removing 0307.不必在乎我是谁-李宗盛.flac
+Jul 21 16:28 : update: removing 0325.不能告诉你-郑智化.flac
+Jul 21 16:28 : update: removing 0466.春残梦断-汪明荃.flac
+Jul 21 16:28 : update: removing 0222.白兰鸽-田震.flac
+Jul 21 16:28 : update: removing 0266.本色-林忆莲.flac
+Jul 21 16:28 : update: removing 0438.迟来的爱-李茂山.flac
+Jul 21 16:28 : update: removing 0244.杯中酒 情人旧-陈瑞&王峰.flac
+Jul 21 16:28 : update: removing 0398.曾经-钟镇涛.ape
+Jul 21 16:28 : update: removing 0394.曾经-林子祥.flac
+Jul 21 16:28 : update: removing 0303.玻璃心-齐秦.flac
+Jul 21 16:28 : update: removing 0328.不能说的秘密-林俊杰.flac
+Jul 21 16:28 : update: removing 0454.楚留香-郑少秋.flac
+Jul 21 16:28 : update: removing 0489.达坂城的姑娘-刀郎.flac
+Jul 21 16:28 : update: removing 0491.答案-齐豫.flac
+Jul 21 16:28 : update: removing 0330.不能这样活-刘欢.flac
+Jul 21 16:28 : update: removing 0475.此生不见-陈瑞.flac
+Jul 21 16:28 : update: removing 0393.曾经的你-许巍.flac
+Jul 21 16:28 : update: removing 0430.痴痴的等-凤飞飞.flac
+Jul 21 16:28 : update: removing 0283.别让情两难-张信哲&范文芳.flac
+Jul 21 16:28 : update: removing 0259.被风吹过的夏天-林俊杰&金莎.flac
+Jul 21 16:28 : update: removing 0377.彩云伴海鸥-高胜美.flac
+Jul 21 16:28 : update: removing 0316.不见不散-Beyond.flac
+Jul 21 16:28 : update: removing 0297.冰力十足-任贤齐.flac
+Jul 21 16:28 : update: removing 0219.白鸽-伍佰.flac
+Jul 21 16:28 : update: removing 0256.背叛-伍佰.flac
+Jul 21 16:28 : update: removing 0285.别人都说我们会分开-无印良品.flac
+Jul 21 16:28 : update: removing 0371.猜测-无印良品.flac
+Jul 21 16:28 : update: removing 0493.打了一把钥匙给你-刘若英.flac
+Jul 21 16:28 : update: removing 0332.不怕死-杜德伟.flac
+Jul 21 16:28 : update: removing 0367.不走-杜德伟.flac
+Jul 21 16:28 : update: removing 0374.彩虹-杜德伟.flac
+Jul 21 16:28 : update: removing 0344.不许哭-林忆莲.flac
+Jul 21 16:28 : update: removing 0345.不要爱我-莫文蔚.flac
+Jul 21 16:28 : update: removing 0310.不曾在你面前掉过泪-赵传.flac
+Jul 21 16:28 : update: removing 0346.不要挡在我的面前-赵传.flac
+Jul 21 16:28 : update: removing 0379.踩着三轮车卖菜的老阿伯-阿牛.flac
+Jul 21 16:28 : update: removing 0406.唱歌给你听-阿牛.flac
+Jul 21 16:28 : update: removing 0426.城市蓝天-阿牛.flac
+Jul 21 16:28 : update: removing 0254.备份的爱-陈松伶.flac
+Jul 21 16:28 : update: removing 0415.吵架-陈松伶.flac
+Jul 21 16:28 : update: removing 0469.春去春又回-陈淑桦.flac
+Jul 21 16:28 : update: removing 0478.聪明糊涂心-陈淑桦.flac
+Jul 21 16:28 : update: removing 0290.别忘记联络-黄品源.flac
+Jul 21 16:28 : update: removing 0258.被动-苏慧伦.flac
+Jul 21 16:28 : update: removing 0349.不要说爱我-苏慧伦.flac
+Jul 21 16:28 : update: removing 0279.遍体鳞伤-草蜢.flac
+Jul 21 16:28 : update: removing 0413.潮湿的心-甘萍.flac
+Jul 21 16:28 : update: removing 0496.大城小爱-王力宏.flac
+Jul 21 16:28 : update: removing 0376.彩虹-周杰伦.flac
+Jul 21 16:28 : update: removing 0287.别说爱情苦-刘德华&梅艳芳.flac
+Jul 21 16:28 : update: removing 0217.白富美-大庆小芳.flac
+Jul 21 16:28 : update: removing 0263.奔跑-黄征&羽·泉.flac
+Jul 21 16:28 : update: removing 0420.趁早-张惠妹.flac
+Jul 21 16:28 : update: removing 0480.从开始到现在-张信哲.flac
+Jul 21 16:28 : update: removing 0481.从前我所紧抱的-刘德华.flac
+Jul 21 16:28 : update: removing 0242.抱紧我心-张智霖&许秋怡.flac
+Jul 21 16:28 : update: removing 0484.翠湖寒-邓丽君.flac
+Jul 21 16:28 : update: removing 0317.不可不信...缘-刘德华.flac
+Jul 21 16:28 : update: removing 0224.白天不懂夜的黑-那英.flac
+Jul 21 16:28 : update: removing 0218.白富美-楼宏章.flac
+Jul 21 16:28 : update: removing 0277.变色龙-叶振棠.ape
+Jul 21 16:28 : update: removing 0499.大地恩情-叶振棠.ape
+Jul 21 16:28 : update: removing 0397.曾经心痛-叶倩文.flac
+Jul 21 16:28 : update: removing 0323.不能不想你-周冰倩.flac
+Jul 21 16:28 : update: removing 0340.不想让你哭-王强.flac
+Jul 21 16:28 : update: removing 0461.窗外-李琛.flac
+Jul 21 16:28 : update: removing 0384.藏龙卧虎-屠洪刚.flac
+Jul 21 16:28 : update: removing 0427.乘客-王菲.flac
+Jul 21 16:28 : update: removing 0300.冰雨-刘德华.flac
+Jul 21 16:28 : update: removing 0225.白月光-张信哲.flac
+Jul 21 16:28 : update: removing 0282.别怕我伤心-张信哲.flac
+Jul 21 16:28 : update: removing 0457.穿过你的黑发的我的手-罗大佑.flac
+Jul 21 16:28 : update: removing 0424.城里的月光-齐秦.flac
+Jul 21 16:28 : update: removing 0350.不要说黎明-郑智化.flac
+Jul 21 16:28 : update: removing 0490.达奇达奇嘟-郑智化.flac
+Jul 21 16:28 : update: removing 0354.不要在脸上留下眼泪-罗百吉.flac
+Jul 21 16:28 : update: removing 0388.草原夜色美-乌兰托娅.flac
+Jul 21 16:28 : update: removing 0275.避风港-郑智化.flac
+Jul 21 16:28 : update: removing 0418.沉默的羔羊-郑智化.flac
+Jul 21 16:28 : update: removing 0237.蚌的启示-关正杰&区瑞强&卢冠廷.flac
+Jul 21 16:28 : update: removing 0414.潮湿的心-卓依婷.flac
+Jul 21 16:28 : update: removing 0226.百万个吻-陈明真.flac
+Jul 21 16:28 : update: removing 0247.北风吹-朱逢博.flac
+Jul 21 16:28 : update: removing 0223.白色恋人-游鸿明.flac
+Jul 21 16:28 : update: removing 0444.抽烟的女人-陈瑞.flac
+Jul 21 16:28 : update: removing 0419.沉默是金-许冠杰&张国荣.flac
+Jul 21 16:28 : update: removing 0470.春天的故事-董文华.flac
+Jul 21 16:28 : update: removing 0276.变迁中的你的我(演奏版)-罗大佑.flac
+Jul 21 16:28 : update: removing 0318.不可一世-Beyond.flac
+Jul 21 16:28 : update: removing 0400.茶山姑娘-邓丽君.flac
+Jul 21 16:28 : update: removing 0380.苍天在上-郑钧.flac
+Jul 21 16:28 : update: removing 0471.春天的故事-齐豫.flac
+Jul 21 16:28 : update: removing 0479.从不放弃-郑少秋.flac
+Jul 21 16:28 : update: removing 0389.草原迎宾曲-降央卓玛.flac
+Jul 21 16:28 : update: removing 0387.草原上升起不落的太阳-降央卓玛.flac
+Jul 21 16:28 : update: removing 0391.草原之夜-降央卓玛.flac
+Jul 21 16:28 : update: removing 0353.不要再想你-费翔.flac
+Jul 21 16:28 : update: removing 0359.不再别离-费翔.flac
+Jul 21 16:28 : update: removing 0360.不再回头-费翔.flac
+Jul 21 16:28 : update: removing 0463.闯天涯-赵真&司徒兰芳.flac
+Jul 21 16:28 : update: removing 0487.错误的爱-陈盈洁.flac
+Jul 21 16:28 : update: removing 0417.尘埃里的花-陈瑞.flac
+Jul 21 16:28 : update: removing 0334.不如归去-韩宝仪.flac
+Jul 21 16:28 : update: removing 0443.哮儿飞-郑伊健.flac
+Jul 21 16:28 : update: removing 0401.茶山情歌-杨钰莹.flac
+Jul 21 16:28 : update: removing 0335.不如跳舞-陈慧琳.flac
+Jul 21 16:28 : update: removing 0241.保卫黄河-中国国家交响乐团.flac
+Jul 21 16:28 : update: removing 0292.别问-张学友.flac
+Jul 21 16:28 : update: removing 0339.不想你-龙飘飘.flac
+Jul 21 16:28 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:29 : exception: Failed to open /home/molisiye/.config/mpd/playlists: No such file or directory
+Jul 21 16:34 : player: played "0153.爱如潮水-张信哲.flac"
+Jul 21 16:38 : player: played "0046.Para Para 樱之花-郭富城.flac"
+Jul 21 16:39 : player: played "0046.Para Para 樱之花-郭富城.flac"

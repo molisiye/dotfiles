@@ -1,11 +1,11 @@
 {
     // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)		
-    "height": 18, // Waybar height (to be removed for auto height)
-    "width": 1280, // Waybar width
+    //"height": 18, // Waybar height (to be removed for auto height)
+    //"width": 1920, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "custom/github", "custom/reddit", "custom/youtube", "sway/window"],
-    "modules-center": ["sway/mode"],
+    //"modules-center": ["sway/mode"],
     "modules-right": ["pulseaudio","custom/weather", "disk", "memory", "cpu", "network", "custom/pacman","tray","custom/recorder","clock","custom/power",],
     // Modules configuration
     "sway/workspaces": {
@@ -148,7 +148,7 @@
         "bat": "BAT0"
     },
     "network": {
-        "interface": "wlan0", // (Optional) To force the use of this interface
+        "interface": "ens33", // (Optional) To force the use of this interface
         "format-wifi": " ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",

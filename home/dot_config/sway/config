@@ -28,8 +28,10 @@ bar {
   swaybar_command waybar
 }
 
+exec mako
 # Polkit: privilege escalation dialog
 exec lxpolkit
+exec fcitx5
 
 font Iosevka Nerd Font Mono 12
 # Your preferred terminal emulator
@@ -45,7 +47,8 @@ set $rofi_cmd rofi \
 # executables from PATH.
 # TODO: add window with the next release of rofi-wayland
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
-
+set $drun tofi-drun --drun-launch=true
+bindsym $mod+Shift+d exec $drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)

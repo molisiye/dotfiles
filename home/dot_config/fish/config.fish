@@ -3,25 +3,96 @@ set PATH $PATH $HOME/.local/bin
 set -xg GOROOT /usr/lib/go
 set -xg GOPATH $HOME/go
 set -xg GOBIN $HOME/go/bin
-set -xg http_proxy "http://127.0.0.1:8889"
-set -xg all_proxy "http://127.0.0.1:8889"
+#set -xg http_proxy "http://172.16.156.1:7890"
+#set -xg all_proxy "http://172.16.156.1:7890"
 
 set -x EDITOR nvim
 
 #set -xg WAYLAND_DISPLAY wayland-0
 set -U FZF_LEGACY_KEYBINDINGS 0
 
+
+# proxy
+function proxy
+   set -xg http_proxy "http://172.16.156.1:7890"
+   # export https_proxy=$http_proxy
+   set -xg all_proxy "http://172.16.156.1:7890"
+   echo "HTTP Proxy on"
+end
+
+# noproxy
+function noproxy
+  set -e http_proxy
+  set -e all_proxy
+  echo "HTTP Proxy off"
+end
+
+proxy
+
 # Aliases
+alias cm "chezmoi"
+alias cme "cm edit"
+alias cat "command bat"
+alias ping "command prettyping --nolegend"
+alias preview "fzf --preview 'bat --color \"always\" {}'"
+
+# --color dark 使用颜色方案
+# -rr 只读模式（防止误删和运行新的 shell 程序）
+# --exclude 忽略不想操作的目录
+alias du "command ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias help "command tldr"
 alias vf "nvim ~/.config/fish/config.fish"
 alias sf "source ~/.config/fish/config.fish"
-alias l "ll"
-alias cs "sh /opt/shell-color-scripts/colorscript.sh -e"
+
+# Edit shortcuts for config files
+#alias sshconfig "${EDITOR:-vim} ~/.ssh/config"
+#alias zshrc "${EDITOR:-vim} ~/.zshrc && source ~/.zshrc && echo Zsh config edited and reloaded."
+
+
+# SSH helper
+alias sshclear "rm ~/.ssh/multiplex/* -f && echo SSH connection cache cleared;"
+alias sshlist "echo Currently open ssh connections && echo && l ~/.ssh/multiplex/"
+
+
+# lsd
+alias ls "command lsd"
+alias l 'ls -l'
+alias la 'ls -a'
+alias lla 'ls -la'
+alias lt 'ls --tree'
+
+
+# Date and Time Alias
+alias d "date +%F"
+alias now "date +%T"
+alias nowtime now
+alias nowdate "date + '%m-%d-%Y'"
+
+alias snv "sudo nvim"
+
+# Show open ports
+alias ports "netstat -tulanp"
+
+# Prettify the Output of Various Commands
+alias dfc "df -hP | column -t"
+
+
+alias c "clear"
+alias h "history"
+#alias path "echo -e ${PATH//:/\\n}"
+
+
+alias  gz 'tar -xzvf'
+alias  tgz 'tar -xzvf'
+alias  zip 'unzip'
+alias  bz2 'tar -xjvf'
+alias  xz 'tar -xzJf'
+alias dnf5 'sudo dnf5'
+
 
 alias jg "cd ~/git"
-alias jb "cd ~/git/bspwm-dotfiles"
-alias ji "cd ~/git/i3-dotfiles"
-alias jx "cd ~/git/xmonad-dotfiles"
 alias jc "cd ~/.config"
+alias jf "cd ~/.config/fish"
 alias jd "cd ~/Downloads"
 alias jdc "cd ~/Downloads/Compressed"
 alias jcl "cd ~/clone"
@@ -29,12 +100,7 @@ alias jcl "cd ~/clone"
 alias vp "nvim ~/.config/picom/picom.conf"
 alias v3 "nvim ~/.config/i3/config"
 alias vw "nvim ~/.config/sway/config"
-alias vx "nvim ~/.xmonad/xmonad.hs"
-alias vb "nvim ~/.config/bspwm/bspwmrc"
 alias vs "nvim ~/.config/sxhkd/sxhkdrc"
-alias vv "nvim ~/.vimrc"
-alias vvc "nvim ~/.vimrc.custom.config"
-alias vvp "nvim ~/.vimrc.custom.plugins"
 
 alias pyins "pip3 install --user"
 alias pyuins "pip3 uninstall"
@@ -56,9 +122,6 @@ alias gc "git clone"
 alias ga "git add"
 alias gm "git commit -m"
 alias gps "git push"
-
-alias doom "~/.emacs.d/bin/doom"
-alias ew "emacsclient -nw"
 
 alias vim "nvim"
 alias c "clear"
