@@ -7,3 +7,5 @@
 [user]
 	email = molisiye@live.com
 	name = molisiye
+[init]
+	defaultBranch = main
