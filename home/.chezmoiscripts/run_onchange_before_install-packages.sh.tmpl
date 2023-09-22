@@ -6,6 +6,11 @@ set -ev pipefail
 {{- if (eq .chezmoi.osRelease.id "fedora") -}}
 sudo dnf copr enable atim/starship
 {{ $packages := list
+  "adobe-source-han-serif-otc-fonts"
+  "imagemagick"
+  "catppuccin-gtk-theme-mocha"
+  "microsoft-edge-stable-bin"
+  "firefox"
   "flatpak"
   "fcitx5"
   "flameshot"
