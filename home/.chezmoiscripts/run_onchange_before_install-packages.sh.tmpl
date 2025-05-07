@@ -6,10 +6,8 @@ set -ev pipefail
 {{- if (eq .chezmoi.osRelease.id "fedora") -}}
 sudo dnf copr enable atim/starship
 {{ $packages := list
-  "adobe-source-han-serif-otc-fonts"
-  "imagemagick"
-  "catppuccin-gtk-theme-mocha"
-  "microsoft-edge-stable-bin"
+  "adobe-source-han-serif-cn-fonts"
+  "ImageMagick"
   "firefox"
   "flatpak"
   "fcitx5"
@@ -45,7 +43,7 @@ sudo dnf copr enable atim/starship
 
 sudo dnf update
 sudo dnf upgrade -y
-sudo dnf install -y {{ $packages | join " " }}
+sudo dnf install -y {{ $packages | join " " }} --skip-unavailable
 
 # Setting the System Locale
 # localctl set-locale LANG={ { .locale }} || echo -e "Could not set locale - Ignore if happens within Container"

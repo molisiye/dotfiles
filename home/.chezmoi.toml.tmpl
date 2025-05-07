@@ -1,22 +1,24 @@
 {{/* boolean feature tags */}}
-{{- $docker := false -}}{{/* true if this machine should have Docker installed */}}
 {{- $ephemeral := false -}}{{/* true if this machine is ephemeral, e.g. a cloud or VM instance */}}
-{{- $flarm := false -}}{{/* true if this machine is used for FLARM */}}
+{{- $work := false -}}{{/* true if this machine is a work machine */}}
 {{- $headless := false -}}{{/* true if this machine does not have a screen and keyboard */}}
 {{- $personal := false -}}{{/* true if this machine should have personal secrets */}}
 {{- "" -}}
 
-
 {{- $osID := .chezmoi.os -}}
 {{- if (and (eq .chezmoi.os "linux") (hasKey .chezmoi.osRelease "id")) -}}
-{{- $osID := printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
+{{-   $osID = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
+{{- end -}}
+
 
 {{/* work around unreliable hostname on darwin */}}
 {{- $hostname := .chezmoi.hostname -}}
 {{- if eq .chezmoi.os "darwin" -}}
 {{-   $computerName := output "scutil" "--get" "ComputerName" | trim -}}
-{{-   if eq $computerName "zjp's MacBook Pro" -}}
-{{-     $hostname = "zjp's mbp" -}}
+{{-   if eq $computerName "zzm’s Laptop" -}}
+{{-     $hostname = "zzms-laptop" -}}
+{{-   else if eq $computerName "zzm’s MacBook Pro" -}}
+{{-     $hostname = "zzms-mbp" -}}
 {{-   else -}}
 {{-     $hostname = $computerName -}}
 {{-   end -}}
@@ -24,19 +26,24 @@
 
 
 
-{{- if eq .chezmoi.os "windows" -}}
-{{-   $ephemeral = true -}}
+{{- $email := "molisiye@live.com" -}}
+{{- if $work -}}
+{{-   $email = "molisiye@live.com" -}}
 {{- end -}}
 
-
-{{- $email := "molisiye@live.com" -}}
-
 [data]
-    docker = {{ $docker }}
     ephemeral = {{ $ephemeral }}
     email = {{ $email | quote }}
-    flarm = {{ $flarm }}
+    work = {{ $work }}
     headless = {{ $headless }}
     hostname = {{ $hostname | quote }}
     personal = {{ $personal }}
     osid = {{ $osID | quote }}
+    zshPlugins = [
+        "per-directory-history",
+        "vi-mode",
+        "zsh-syntax-highlighting",
+    ]
+
+[github]
+    refreshPeriod = "12h"

@@ -12,6 +12,7 @@ set -x EDITOR nvim
 set -U FZF_LEGACY_KEYBINDINGS 0
 
 
+{{- if not ehphmeral -}}
 # proxy
 function proxy
    set -xg http_proxy "http://172.16.156.1:7890"
@@ -27,7 +28,8 @@ function noproxy
   echo "HTTP Proxy off"
 end
 
-proxy
+#proxy
+{{- end -}}
 
 # Aliases
 alias cm "chezmoi"
