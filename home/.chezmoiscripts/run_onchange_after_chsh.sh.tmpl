@@ -1,7 +1,7 @@
-{{- if (not .ephemeral) -}}
+{{- if (eq .chezmoi.os "linux") -}}
 #!/bin/bash
 
 set -eufo pipefail
 
-chsh -s /usr/bin/zsh
+chsh -s /usr/bin/fish
 {{ end -}}
