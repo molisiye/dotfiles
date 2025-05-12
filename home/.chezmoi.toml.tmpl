@@ -1,9 +1,13 @@
 {{/* boolean feature tags */}}
-{{- $ephemeral := false -}}{{/* true if this machine is ephemeral, e.g. a cloud or VM instance */}}
+{{- $is_vm := false -}}{{/* true if this machine is is_vm, e.g. a cloud or VM instance */}}
 {{- $work := false -}}{{/* true if this machine is a work machine */}}
 {{- $headless := false -}}{{/* true if this machine does not have a screen and keyboard */}}
 {{- $personal := false -}}{{/* true if this machine should have personal secrets */}}
 {{- "" -}}
+
+{{if (output "systemd-detect-virt" | trim)}}
+    {{ $is_vm = true}}
+{{end}}
 
 {{- $osID := .chezmoi.os -}}
 {{- if (and (eq .chezmoi.os "linux") (hasKey .chezmoi.osRelease "id")) -}}
@@ -32,7 +36,7 @@
 {{- end -}}
 
 [data]
-    ephemeral = {{ $ephemeral }}
+    is_vm = {{ $is_vm }}
     email = {{ $email | quote }}
     work = {{ $work }}
     headless = {{ $headless }}
