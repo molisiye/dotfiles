@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Only run on Fedora
+{{ if ne .chezmoi.osRelease.id "fedora" }}
+    echo "This script is only for Fedora. Skipping SELinux disable."
+    exit 0
+{{ end }}
+
+# Check if running as root
+if [ "$(id -u)" -ne 0 ]; then
+    echo "Please run as root or use sudo." >&2
+    exit 1
+fi
+
+# Check current SELinux status
+current_status=$(getenforce)
+if [ "$current_status" = "Disabled" ]; then
+    echo "SELinux is already disabled."
+    exit 0
+fi
+
+# Temporarily set to Permissive
+setenforce 0
+echo "SELinux temporarily set to Permissive."
+
+# Permanently disable
+sudo sed -i 's/^SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
+echo "SELinux has been permanently disabled. Reboot to apply changes."
+
+# Add to chezmoi state so it won't run again
+{{ if .chezmoi.sourceDir }}
+    touch "{{ .chezmoi.sourceDir }}/.disable_selinux_completed"
+{{ end }}
