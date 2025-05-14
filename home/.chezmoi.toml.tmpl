@@ -1,13 +1,21 @@
 {{/* boolean feature tags */}}
 {{- $is_vm := false -}}{{/* true if this machine is is_vm, e.g. a cloud or VM instance */}}
+{{ $vm_type := "bare-metal" }}
 {{- $work := false -}}{{/* true if this machine is a work machine */}}
 {{- $headless := false -}}{{/* true if this machine does not have a screen and keyboard */}}
 {{- $personal := false -}}{{/* true if this machine should have personal secrets */}}
 {{- "" -}}
 
-{{if (output "systemd-detect-virt" | trim)}}
-    {{ $is_vm = true}}
-{{end}}
+{{- if eq .chezmoi.os "linux" -}}
+    {{/* 方法1：systemd-detect-virt */}}
+    {{ if (stat "systemd-detect-virt") }}
+        {{ $detected := (output "systemd-detect-virt" | trim) }}
+        {{ if ne $detected "none" }}
+            {{ $is_vm = true }}
+            {{ $vm_type = $detected }}
+        {{ end }}
+    {{ end }}
+{{ end }}
 
 {{- $osID := .chezmoi.os -}}
 {{- if (and (eq .chezmoi.os "linux") (hasKey .chezmoi.osRelease "id")) -}}
@@ -42,12 +50,9 @@
     headless = {{ $headless }}
     hostname = {{ $hostname | quote }}
     personal = {{ $personal }}
-    osid = {{ $osID | quote }}
+    osId = {{ $osID | quote }}
     zshPlugins = [
         "per-directory-history",
         "vi-mode",
         "zsh-syntax-highlighting",
     ]
-
-[github]
-    refreshPeriod = "12h"
