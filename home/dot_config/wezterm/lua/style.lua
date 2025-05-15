@@ -58,19 +58,19 @@ function module.apply(config)
 			top = "0.15cell",
 			bottom = "0cell",
 		}
-	elseif wezterm.target_triple == "x86_64-apple-darwin" then
-		config.font_size = 18
+	elseif wezterm.target_triple == "aarch64-apple-darwin" then
+		config.font_size = 18.3
 		config.window_padding = {
 			right = "0cell",
-			top = "0.15cell",
+			top = "1.6cell",
 			bottom = "0cell",
 		}
 	end
 	config.font = wezterm.font_with_fallback({
-		{ family = "IosevkaTerm Nerd Font Mono" },
+		-- { family = "IosevkaCloudtide Nerd Font" },
 		-- { family = "Symbols Nerd Font Mono", scale = 0.85 },
-		{ family = "Concrete Math", scale = 1.0 },
-		{ family = "LXGW WenKai", scale = 1.05 }, --中文测试
+		-- { family = "Concrete Math", scale = 1.0 },
+		-- { family = "LXGW WenKai", scale = 1.05 }, --中文测试
 	})
 
 	-- colors

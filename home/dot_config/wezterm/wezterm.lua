@@ -30,7 +30,7 @@ config.default_cursor_style = "BlinkingBlock"
 -- set transparent
 -- config.window_background_opacity = 0.83
 config.win32_system_backdrop = "Acrylic" -- "Auto" or "Acrylic"
-config.animation_fps = 144
+config.animation_fps = 60
 config.default_domain = "local"
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
@@ -38,7 +38,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.default_prog = { "pwsh", "-NoLogo" }
 end
 
-config.max_fps = 144
+config.max_fps = 60
 config.enable_kitty_graphics = true
 config.window_close_confirmation = "NeverPrompt"
 
