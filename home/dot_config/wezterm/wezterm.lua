@@ -12,8 +12,8 @@ domains.apply(config)
 
 -- config.term = "wezterm"
 -- set initial size for screens
-config.initial_rows = 42
-config.initial_cols = 170
+config.initial_rows = 35
+config.initial_cols = 150
 config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 -- config.freetype_load_target = 'Light'

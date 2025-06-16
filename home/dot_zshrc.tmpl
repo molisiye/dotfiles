@@ -15,10 +15,6 @@ noproxy () {
   echo "HTTP Proxy off"
 }
 
-function run_diso {
-  sh -c "$@" &
-  disown
-}
 
 function pbcopydir {
   pwd | tr -d "\r\n" | pbcopy
@@ -113,9 +109,6 @@ zinit ice for \
     OMZ::plugins/extract \
     OMZ::plugins/pip
 
-zinit as="completion" for \
-    OMZ::plugins/fd/_fd
-
 
 zstyle ':fzf-tab:complete:_zlua:*' query-string input
 zstyle ':fzf-tab:complete:kill:argument-rest' fzf-preview 'ps --pid=$word -o cmd --no-headers -w -w'
@@ -160,6 +153,7 @@ eval "$(starship init zsh)"
 
 
 eval $(thefuck --alias FUCK)
+eval "$(vfox activate zsh)"
 
 # ==== aliases ====
 
@@ -221,7 +215,6 @@ alias dnf5='sudo dnf5'
 
 alias luamake={{ .chezmoi.homeDir }}/lspserver/lua-language-server/3rd/luamake/luamake
 
-eval $(thefuck --alias)
 
 
 ### End of Zinit's installer chunk
