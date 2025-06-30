@@ -153,7 +153,6 @@ eval "$(starship init zsh)"
 
 
 eval $(thefuck --alias FUCK)
-eval "$(vfox activate zsh)"
 
 # ==== aliases ====
 
@@ -216,5 +215,10 @@ alias dnf5='sudo dnf5'
 alias luamake={{ .chezmoi.homeDir }}/lspserver/lua-language-server/3rd/luamake/luamake
 
 
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.dotnet:$PATH"
+# eval "$(/usr/local/bin/mise activate zsh)"
+export PATH="$PATH:$HOME/.dotnet/tools"
+export DOTNET_ROOT="$HOME/.dotnet"
 
 ### End of Zinit's installer chunk
